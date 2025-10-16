@@ -28,7 +28,10 @@ public class Main {
             case "APRIL", "MAY", "JUNE" -> "2nd";
             case "JULY", "AUGUST", "SEPTEMBER" -> "3rd";
             case "OCTOBER", "NOVEMBER", "DECEMBER" -> "4th";
-            default -> "invalid month";
+            default -> {
+                String badResponse = month + " is an invalid month";
+                yield  badResponse;
+            }
         };
     }
 
