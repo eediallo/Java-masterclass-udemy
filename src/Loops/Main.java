@@ -24,26 +24,24 @@ public class Main {
 
     static String getQuarter(String month) {
         switch (month) {
-            case "JANUARY":
-            case "FEBRUARY":
-            case "MARCH":
+            case "JANUARY", "FEBRUARY", "MARCH" -> {
                 return "1st";
-            case "APRIL":
-            case "MAY":
-            case "JUNE":
+            }
+            case "APRIL", "MAY", "JUNE" -> {
                 return "2nd";
-            case "JULY":
-            case "AUGUST":
-            case "SEPTEMBER":
+            }
+
+            case "JULY", "AUGUST", "SEPTEMBER" ->{
                 return "3rd";
-            case "OCTOBER":
-            case "NOVEMBER":
-            case "DECEMBER":
+            }
+            case "OCTOBER", "NOVEMBER", "DECEMBER" -> {
                 return "4th";
+            }
+            default -> {
+                return "invalid month";
+            }
 
         }
-
-        return "bad";
     }
 
     static void main() {
@@ -51,7 +49,7 @@ public class Main {
         double average = calculateAverageOfNumbers(10);
         System.out.println(average);
 
-        String month = "JANUARY";
+        String month = "MAY";
         System.out.println(getQuarter(month));
     }
 }
