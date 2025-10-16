@@ -35,10 +35,39 @@ public class SwitchChallenge {
         System.out.println(day + " stands for " + dayOfWeek);
     }
 
+
+
+    static  void printNumberInWord(int n){
+        String numberInWord = switch (n) {
+            case 0 -> "ZERO";
+            case 1 -> "ONE";
+            case 2 -> "TWO";
+            case 3 -> "THREE";
+            case 4 -> "FOUR";
+            case 5 -> "FIVE";
+            case 6 -> "SIX";
+            case 7 -> "SEVEN";
+            case 8 -> "EIGHT";
+            case 9 -> "NINE";
+            default -> "OTHER";
+        };
+
+        System.out.println(numberInWord);
+    }
+
     static void main() {
         char character = 'e';
         System.out.println(getNatoAlphabet(character));
+
+        printDayOfWeek(0);
+        printDayOfWeek(1);
+        printDayOfWeek(2);
+        printDayOfWeek(3);
+        printDayOfWeek(4);
         printDayOfWeek(5);
+        printDayOfWeek(6);
+
+        printNumberInWord(6);
 
     }
 }
