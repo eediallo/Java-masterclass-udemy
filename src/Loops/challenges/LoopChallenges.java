@@ -48,8 +48,31 @@ public class LoopChallenges {
     }
 
 
+
+    static void sumNumbersDivisibleByTheeAndFive(){
+        int sum = 0;
+        int count = 0;
+        for(int i = 1; i <= 1000; i++){
+            if(i % 3 == 0 && i % 5 == 0){
+                sum += i;
+                count++;
+                System.out.println(i + " is divisible by 3 and 5");
+
+                if(count == 5){
+                    break;
+                }
+            }
+        }
+
+        System.out.println("Sum => " + sum);
+    }
+
+
+
     static void main() {
 //        printPrimeNumbers(1000);
-        countPrimeNumbers(10);
+//        countPrimeNumbers(10);
+
+        sumNumbersDivisibleByTheeAndFive();
     }
 }
