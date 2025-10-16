@@ -1,9 +1,6 @@
 package Loops.challenges;
 
 public class LoopChallenges {
-    static void main() {
-        printPrimeNumbers(1000);
-    }
 
     static void printPrimeNumbers(int limit){
         for(int i = 1; i <= limit; i++){
@@ -33,5 +30,26 @@ public class LoopChallenges {
         }
 
         return true;
+    }
+
+    static void countPrimeNumbers(int wholeNumber){
+        int primeNumbersCount = 0;
+
+        for(int i = 0; i <= wholeNumber; i++){
+            if(isPrime(i)){
+                System.out.println(i);
+                primeNumbersCount++;
+
+                if(primeNumbersCount == 3){
+                    break;
+                }
+            }
+        }
+    }
+
+
+    static void main() {
+//        printPrimeNumbers(1000);
+        countPrimeNumbers(10);
     }
 }
